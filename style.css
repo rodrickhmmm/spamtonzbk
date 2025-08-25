@@ -1,33 +1,175 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Lexend+Deca:wght@100..900&display=swap');
 
-body{
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #151a1b;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.text{
+.text {
+    background: rgba(30, 30, 40, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 4px 32px #000a;
     padding: 6vw;
-    color: #ffffff;
+    color: #fff;
     text-align: center;
-    margin-top: 3vw;
-    font-size: 4vw;
-    /*font-weight: bold;*/
+    margin-top: 0;
+    font-size: clamp(1rem, 3vw, 3.5vw);
     text-shadow: 3px 3px 10px #727272;
-    font-family: Lexend Deca;
+    font-family: 'Lexend Deca', Arial, sans-serif;
+    word-break: break-word;
+    max-width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    animation: fadeIn 1s;
+    scrollbar-width: thin;
+    scrollbar-color: #ffe43e #7b50f3;
+}
+
+.text h1 {
+    font-family: 'Funnel Display', Arial, sans-serif;
+    font-size: clamp(1.5rem, 5vw, 5vw);
+    color: #ffe43e;
+    margin-bottom: 2vw;
+    text-shadow: 2px 2px 20px #f8eb71a0;
+}
+
+.highlight {
+    color: #7b50f3;
+    font-weight: bold;
+    text-shadow: 1px 1px 20px rgba(123, 80, 243, 0.479);
+}
+
+.highlight,
+a.highlight {
+    transition: color 0.2s, text-shadow 0.2s, background 0.2s;
+    cursor: pointer;
+}
+
+.highlight:hover,
+a.highlight:hover {
+    color: #a568f5;
+}
+
+.discord-nick {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7em;
+    color: #ffe43e;
+    font-weight: bold;
+    text-shadow: 1px 1px 20px #f8eb718e;
+    font-size: 3vw;
+}
+
+.discord-avatar {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px #0004;
+    border: 2px solid #ffe43e;
+    max-width: 10vw;
+    max-height: 10vw;
+    min-width: 2em;
+    min-height: 2em;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.text::-webkit-scrollbar {
+    width: 12px;
+    background: transparent;
+}
+
+.text::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #7b50f3 0%, #ffe43e 100%);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0004;
+}
+
+.text::-webkit-scrollbar-track {
+    background: rgba(30, 30, 40, 0.3);
+    border-radius: 8px;
+}
+
+.small-text {
+    color: #474646;
+    font-size: 0.9em;
+    opacity: 0.7;
+    margin-top: 30vw;
+    padding-bottom: 4vw;
+    text-align: center;
+    display: block;
+    text-shadow: none;
+}
+
+.project-desc {
+    color: #bbb;
+    font-size: 0.9em;
+    margin-top: -0.5vw;
+    margin-bottom: 2vw;
+    text-shadow: none;
+}
+
+@media (max-width: 900px) {
+    .text {
+        font-size: 5vw;
+        padding: 5vw;
+        max-width: 98vw;
+    }
+    .discord-nick {
+        font-size: 5vw;
+    }
+    .project-desc {
+        font-size: 0.6em;
+        margin-bottom: 3vw;
+    }
 }
 
 @media (max-width: 650px) {
     .text {
-        padding: 5vw;
-        font-size: 5.9vw;
+        font-size: 6vw;
+        padding: 4vw;
+        max-width: 99vw;
+    }
+    .discord-nick {
+        font-size: 7vw;
+    }
+    .project-desc {
+        font-size: 0.6em;
+        margin-bottom: 4vw;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .text {
-        padding: 5vw;
-        font-size: 7vw;
+        font-size: 8vw;
+        padding: 2vw;
+        max-width: 100vw;
+    }
+    .text h1 {
+        font-size: 12vw;
+    }
+    .discord-nick {
+        font-size: 10vw;
+    }
+    .project-desc {
+        font-size: 0.5em;
+        margin-bottom: 5vw;
+    }
+    .small-text {
+        margin-top: 40vw;
+        font-size: 1em;
     }
 }
