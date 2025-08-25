@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Lexend+Deca:wght@100..900&display=swap');
+
 body{
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,10 +8,26 @@ body{
 }
 
 .text{
+    padding: 6vw;
     color: #ffffff;
     text-align: center;
     margin-top: 3vw;
     font-size: 4vw;
-    font-weight: bold;
-    text-shadow: 2px 2px 30px #2b2b2b;
+    /*font-weight: bold;*/
+    text-shadow: 3px 3px 10px #727272;
+    font-family: Lexend Deca;
+}
+
+@media (max-width: 650px) {
+    .text {
+        padding: 5vw;
+        font-size: 5.9vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .text {
+        padding: 5vw;
+        font-size: 7vw;
+    }
 }
