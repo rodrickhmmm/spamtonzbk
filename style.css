@@ -61,6 +61,7 @@ a.highlight:hover {
 }
 
 .discord-nick {
+    margin-top: 3vw;
     display: flex;
     align-items: center;
     justify-content: center;
