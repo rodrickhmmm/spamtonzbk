@@ -7,6 +7,7 @@ body {
     background-color: #151a1b;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -31,6 +32,7 @@ body {
     animation: fadeIn 1s;
     scrollbar-width: thin;
     scrollbar-color: #ffe43e #7b50f3;
+    flex: 1;
 }
 
 .text h1 {
@@ -105,9 +107,9 @@ a.highlight:hover {
 
 .small-text {
     color: #474646;
-    font-size: 0.9em;
+    font-size: 0.6em;
     opacity: 0.7;
-    margin-top: 30vw;
+    margin-top: 100vw;
     padding-bottom: 4vw;
     text-align: center;
     display: block;
@@ -159,6 +161,42 @@ a.highlight:hover {
     font-size: 1em;
 }
 
+.footer {
+    font-family: 'Lexend Deca', Arial, sans-serif;
+    width: 100%;
+    text-align: center;
+    color: #888;
+    font-size: 1.6em;
+    margin-top: 4vw;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+    background: #1d1e24;
+    box-shadow: #161616 0px 0px 20px;
+}
+
+@media (max-width: 900px) {
+    .footer {
+        font-size: 1em;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+    }
+}
+
+@media (max-width: 650px) {
+    .footer {
+        font-size: 0.9em;
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        font-size: 0.8em;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+    }
+}
 @media (max-width: 900px) {
     .text {
         font-size: 5vw;
@@ -206,7 +244,7 @@ a.highlight:hover {
         margin-bottom: 5vw;
     }
     .small-text {
-        margin-top: 40vw;
-        font-size: 1em;
+        margin-top: 100vw;
+        font-size: 0.5em;
     }
 }
